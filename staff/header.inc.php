@@ -61,7 +61,7 @@ if(isset($_SESSION['ADMIN_LOGIN']) && $_SESSION['ADMIN_LOGIN']!=''){
                <div class="navbar-header">
                   <a class="navbar-brand" href="houses.php"><img src="../images/BBHE_logo.png" alt="Logo"></a>
                   <a class="navbar-brand hidden" href="houses.php"><img src="../images/BBHE_logo.png" height= 200px; alt="Logo"></a>
-                  <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+                
                </div>
             </div>
             <div class="top-right">
