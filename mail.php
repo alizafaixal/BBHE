@@ -202,7 +202,7 @@ $message  = '<!DOCTYPE html>
             </tr>
             <tr class="heading">
          
-              <a href="./index.html">Go Back to Home</a> 
+              <a href="./index.php">Go Back to Home</a> 
             
         </tr>
             <tr class="heading">

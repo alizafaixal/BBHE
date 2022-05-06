@@ -215,12 +215,7 @@ $sql="SELECT house_name, house_HeroImg FROM `houses` WHERE house_id = '$house_id
              or trigger_error("Query Failed! SQL: $sql - Error: ".mysqli_error($conn), E_USER_ERROR);
              if($res){?>
              	<script>
-                window.open
- (
-  'mail.php?booking_id=<?php echo $booking_id; ?>',
-//   '_blank' // <- This is what makes it open in a new window.
- );
-// window.location.href="thankyou.html";
+                window.location.href=  'mail.php?booking_id=<?php echo $booking_id; ?>'
 
 
 
