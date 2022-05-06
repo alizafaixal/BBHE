@@ -17,6 +17,7 @@ include('header.php');
         $emailErr='';
         $user_PreferredMethodErr='';
         $msgErr='';
+		$error = '';
 ?>
 
 <body>
@@ -76,7 +77,7 @@ include('header.php');
 								$mobile = inputTesting($_POST["mob"]);
 						   }
 						   if (empty($_POST["user_PreferredMethod"])){
-							   $user_PreferredMethodErr ="user Preferred Method is required";
+							   $user_PreferredMethodErr ="User Preferred Method is required";
 						   } else{
 							   $user_PreferredMethod = inputTesting($_POST["user_PreferredMethod"]);
 						   }
@@ -101,7 +102,14 @@ include('header.php');
 							}	  
 
 						
-							}}?>
+							}
+						if($error == "You message was sent"){
+							$fname = '';
+							$email = '';
+							$mobile = '';
+							$msg = '';
+						}
+					}?>
      <form action="contact.php" method="post">
 		 <span>required *</span>
 
@@ -112,7 +120,7 @@ include('header.php');
 							<input type="text" placeholder="Enter Email" name="email" value="<?php if(isset($email)){ echo $email ;}?>"  >
 							<br> <span class="field_error" id="emailErr"><?php if(isset($emailErr)){ echo $emailErr ;}?></span>
 							<label for="mob"><b>Phone*</b></label>
-							<input type="number" placeholder="Enter your mobile number" name="mob"  value="<?php if(isset($mobile)){ echo $mobile ;}?>" >
+							<input type="text" placeholder="Enter your mobile number" name="mob"  value="<?php if(isset($mobile)){ echo $mobile ;}?>" >
 							<br> <span class="field_error" id="mobileErr"><?php if(isset($mobileErr)){ echo $mobileErr ;}?></span>
 							<label for="prefer">How should we contact you?*</label> 
 							<input id="prefer" type="checkbox" name="user_PreferredMethod" value="mobile" >Mobile

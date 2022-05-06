@@ -1,4 +1,5 @@
 <?php
+$seqID=1;
 include('header.inc.php');
 $sql = "SELECT * FROM `bookings` ORDER BY `added_on` desc";
 $bookings = array();
@@ -59,7 +60,7 @@ if($type=='delete'){
                                      <?php
                                      foreach($bookings as $list){?>
                                      <tr>
-                                     <td><a  class="btn" href="orderDetails.php?id=<?php echo $list['booking_id']?>"><?php echo $list['booking_id']?></a></td>
+                                     <td><a  class="btn" href="orderDetails.php?id=<?php echo $list['booking_id']?>"><?php echo $seqID++;?></a></td>
                                      <td><?php echo $list['house_id'] ?></td>
                                      <td><?php echo $list['user_id'] ?></td>
                                      <td><?php echo $list['checkin'] ?></td>

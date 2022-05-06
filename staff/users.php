@@ -1,4 +1,5 @@
 <?php
+$seqID=1;
 include('header.inc.php');
 $sql = "SELECT * FROM end_users ORDER BY `username` asc";
 $users = array();
@@ -48,7 +49,7 @@ if($type=='delete'){
                                      <?php
                                      foreach($users as $list){?>
                                      <tr>
-                                     <td><?php echo $list['user_id'] ?></td>
+                                     <td><?php echo $seqID++ ?></td>
                                      <td><?php echo $list['username'] ?></td>
                                      <td><?php echo $list['user_email'] ?></td>
                                      <td><?php echo $list['user_password'] ?></td>

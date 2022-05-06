@@ -55,8 +55,7 @@ $password='';
                         <label for="login_username">Username: </label><input type="text" name="login_username" id="login_username" placeholder="Username"> 
                          <br> <span class="field_error" id="login_username_error"><?php if(isset($nameErr)){ echo $nameErr ;}?></span>
                      <label for="login_password">Password: </label> <input type="password"   name="login_password" id="login_password" placeholder="password">
-                        <br> <span class="field_error" id="login_password_error"><?php if(isset($loginpasswordErr)){ echo $loginpasswordErr ;}?></span> <br> 
-                        <a href="">Forget Password</a>
+                        <br> <span class="field_error" id="login_password_error"><?php if(isset($loginpasswordErr)){ echo $loginpasswordErr ;}?></span> 
                         <input type="submit" name="Logsubmit" class="btn" value="Login"><br>
                        
                             <p class="field_error login_msg"><?php if (isset($logError)){ echo $logError ;}?></p>
@@ -80,17 +79,18 @@ $password='';
                     if($usernameErr == '' && $emailErr == '' && $passwordErr == ''){
                             $count = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM end_users WHERE user_email = '$email'")) ;
                             if($count>0){
-                                $Regerror = 'This email is already registered ';
+                                $Regerror = 'This email is already registered, Please login.';
                                 
                             }else{
                                 $insert = "INSERT INTO end_users (username,user_email,user_password) VALUES('$username', '$email', '$password')";
                                 $res = mysqli_query($conn, $insert)
                                 or trigger_error("Query Failed! SQL: $sql - Error: ".mysqli_error($conn), E_USER_ERROR);
-                                $Regerror= 'You are now a member';
+                                $Regerror= 'You are now a member, Please login.';
                         }
                     }
                 }
-                  $user_id = mysqli_insert_id($conn);?>
+                  $user_id = mysqli_insert_id($conn); 
+              ?>
                     <form id="RegForm"  method="post">
                     <h2>Register</h2>
                     <label for="reg_username">Username: </label><input type="text"  name="reg_username" id="reg_username" placeholder="Username">
@@ -108,6 +108,6 @@ $password='';
             </div>
         
             <?php 
-  
+                  
        include('footer.php');
        ?>

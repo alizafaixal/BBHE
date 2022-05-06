@@ -1,5 +1,11 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans:400,600,700";
 @import "https://fonts.googleapis.com/css?family=Open+Sans:400,600,700";
+.fearures{
+    max-height: 5vh;
+    min-height: 5vh;
+    height: 5vh;
+}
+
 .bg-flat-color-1 {
     background: #00c292
 }

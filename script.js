@@ -16,6 +16,9 @@
 // function setImg() {
 //     return img.setAttribute('src', images[i])
 // }
+ let refreshBtn = document.querySelector('.refreshBtn');
+
+ refreshBtn.addEventListener("click" , ()=> window.history.go());
 
 function myFunction() {
     var x = document.getElementById("myTopnav");

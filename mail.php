@@ -200,7 +200,11 @@ $message  = '<!DOCTYPE html>
                     </table>
                 </td>
             </tr>
-
+            <tr class="heading">
+         
+              <a href="./index.html">Go Back to Home</a> 
+            
+        </tr>
             <tr class="heading">
                 <td>
                     Details
@@ -336,10 +340,10 @@ echo $message;
    
 //     echo 'email sent';
 //  ?>
-//     <script>
+  <script>
 //         window.location.href = 'thankyou.html';
 //     </script>
-//  <?php
+ <?php
 // }else{
 //     echo "Email sending failed";
   

@@ -39,6 +39,7 @@
 	
 	<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
 <script src="jQueryAssets/jquery.ui-1.10.4.datepicker.min.js"></script>
+<script src="./script.js"></script>
 
 
 

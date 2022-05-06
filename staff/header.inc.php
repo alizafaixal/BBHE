@@ -47,6 +47,9 @@ if(isset($_SESSION['ADMIN_LOGIN']) && $_SESSION['ADMIN_LOGIN']!=''){
 				  <li class="menu-item-has-children dropdown">
                      <a href="contact_us.php" > House Contact Us</a>
                   </li>
+                  <li class="">
+                  <a class="nav-link" href="logout.php"><i class="fa fa-power-off"></i>Logout</a>
+                  </li>
 				  
                </ul>
             </div>
@@ -64,10 +67,9 @@ if(isset($_SESSION['ADMIN_LOGIN']) && $_SESSION['ADMIN_LOGIN']!=''){
             <div class="top-right">
                <div class="header-menu">
                   <div class="user-area dropdown float-right">
-                     <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome Admin</a>
-                     <div class="user-menu dropdown-menu">
-                        <a class="nav-link" href="logout.php"><i class="fa fa-power-off"></i>Logout</a>
-                     </div>
+                 
+                     <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome Admin  </a>
+                   
                   </div>
                </div>
             </div>

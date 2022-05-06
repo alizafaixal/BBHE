@@ -1,12 +1,12 @@
 <?php
 $title = 'BBHE- Booking';
 include('header.php');
+$html = "<button  class='refreshBtn'> Continue to checkout </button>";
 
 function clean($data){
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
-  
     return $data;
 }
 if(!isset($_SESSION['house_id'])){
@@ -66,6 +66,8 @@ $sql="SELECT house_name, house_HeroImg FROM `houses` WHERE house_id = '$house_id
              </div>
          </div>
     </div>
+    <?php 	if(!isset($_SESSION['USER_LOGIN'])){?>
+						
        <div class="container form_container">
        <h1>Create an account</h1>
     
@@ -93,7 +95,8 @@ $sql="SELECT house_name, house_HeroImg FROM `houses` WHERE house_id = '$house_id
                         $_SESSION['USER_LOGIN'] ='yes';
                         $_SESSION['USER_ID'] =$row['user_id'];
                         $_SESSION['USER_NAME'] =$row['username'];
-                        $logError= 'You are now logged in';
+                        $logError= 'You are now logged in' . $html;
+                       
                     }else{
                         $logError= 'please enter correct details';
                     }
@@ -102,18 +105,20 @@ $sql="SELECT house_name, house_HeroImg FROM `houses` WHERE house_id = '$house_id
                 ?>
                     <form id="LoginForm" method="post">
                     <h2>Login</h2>
-                    <span>required field has * at the end</span>
+                    <span>Required field has (*)</span>
                         <label for="login_username">Username*: </label><input type="text" name="login_username" id="login_username" placeholder="Username" value="<?php if(isset($name)){ echo $name ;}?>">  
                          <br> <span class="field_error" id="login_username_error"><?php if(isset($nameErr)){ echo $nameErr ;}?></span>
                      <label for="login_password">Password*
                          : </label> <input type="password"   name="login_password" id="login_password" placeholder="password" value="<?php if(isset($password)){ echo $password ;}?>">
-                        <br> <span class="field_error" id="login_password_error"><?php if(isset($loginpasswordErr)){ echo $loginpasswordErr ;}?></span> <br> 
-                        <a href="">Forget Password</a>
+                        <br> <span class="field_error" id="login_password_error"><?php if(isset($loginpasswordErr)){ echo $loginpasswordErr ;}?>
+                   </span> <br> 
+                      
                         <input type="submit" name="Logsubmit" class="btn" value="Login"><br>
                        
                             <p class="field_error login_msg"><?php if (isset($logError)){ echo $logError ;}?></p>
                         </form>
                 </div>
+              
                 <div class="col">
                 <?php
                   if(isset($_POST['Regsubmit'])){
@@ -132,19 +137,19 @@ $sql="SELECT house_name, house_HeroImg FROM `houses` WHERE house_id = '$house_id
                     if($usernameErr == '' && $emailErr == '' && $passwordErr == ''){
                             $count = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM end_users WHERE user_email = '$email'")) ;
                             if($count>0){
-                                $Regerror = 'This email is already registered ';
+                                $Regerror = 'This email is already registered, Please login';
                                 
                             }else{
                                 $insert = "INSERT INTO end_users (username,user_email,user_password) VALUES('$username', '$email', '$password')";
                                 $res = mysqli_query($conn, $insert)
                                 or trigger_error("Query Failed! SQL: $sql - Error: ".mysqli_error($conn), E_USER_ERROR);
-                                $Regerror= 'You are now a member';
+                                $Regerror= 'You are now a member, Please login';
                         }
                     }
                 }
             ?>
                     <form id="RegForm"  method="post">
-                    <span>required field has * at the end</span>
+                    <span>Required field has (*)</span>
   
                     <h2>Register</h2>
                     <label for="reg_username">Username*: </label><input type="text"  name="reg_username" id="reg_username" placeholder="Username"  value="<?php if(isset($username)){ echo $username ;}?>">
@@ -160,7 +165,7 @@ $sql="SELECT house_name, house_HeroImg FROM `houses` WHERE house_id = '$house_id
                 </div>
             </div>
        </div>
-       <?php
+       <?php }else{
        if(isset($_POST['userFormSubmit'])){
         if(isset($_POST['fname'])){$fname = clean($_POST['fname']);}
         if(isset($_POST['lname'])){$lname = clean($_POST['lname']);}
@@ -213,7 +218,7 @@ $sql="SELECT house_name, house_HeroImg FROM `houses` WHERE house_id = '$house_id
                 window.open
  (
   'mail.php?booking_id=<?php echo $booking_id; ?>',
-  '_blank' // <- This is what makes it open in a new window.
+//   '_blank' // <- This is what makes it open in a new window.
  );
 // window.location.href="thankyou.html";
 
@@ -225,7 +230,7 @@ $sql="SELECT house_name, house_HeroImg FROM `houses` WHERE house_id = '$house_id
                 }
     
        }
-      if(isset($_SESSION['USER_LOGIN'])){?>
+    ?>
       <div class=" container booking_details_container">
       <h2>Booking Form</h2>
      
@@ -233,14 +238,14 @@ $sql="SELECT house_name, house_HeroImg FROM `houses` WHERE house_id = '$house_id
         <form action="" method="post" class="row">
         <div class="col">
             <h3>Personal Details</h3>
-            <span>required field has * at the end</span>
-        <label for="fname">First Name *</label>
+            <span>Required field has (*)</span>
+        <label for="fname">First Name*</label>
             <input type="text" id="fname" name="fname" value="<?php if(isset($fname)){ echo $fname ;}?>"> <br>
             <span><?php if(isset($fnameerr)){ echo $fnameerr ;}?></span>
-            <label for="lname">Last Name *</label>
+            <label for="lname">Last Name*</label>
             <input type="text" id="lname" name="lname" value="<?php if(isset($lname)){ echo $lname ;}?>"> <br>
             <span><?php if(isset($lnameerr)){ echo $lnameerr ;}?></span>
-            <label for="email">Email *</label>
+            <label for="email">Email*</label>
             <input type="email" id="email" name="email" value="<?php if(isset($email)){ echo $email ;}?>"> <br>
             <span><?php if(isset($emailErr)){ echo $emailErr ;}?></span>
             <label for="Phone">Phone *</label>
@@ -269,7 +274,9 @@ A 50% refund is available with less than 5 days notice of cancellation in writin
         </div>
        
        </form>
-       <?php } 
+       <?php 
+       }
+     
 
        include('footer.php');
        ?>

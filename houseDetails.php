@@ -232,13 +232,13 @@ $title = 'BBHE- house details';
                    $checkin_date=  date_format($date,"Y-m-d");
                   //  $checkin_date = date_add($checkin, date_interval_create_from_date_string("1 day"));
                      $date1=date_create($checkout);
-                     $checkout_date=  date_format($date1,"Y-m-d");
+                     $checkout_date=  date_format($date1,"Y-m-d"); 
                	$sql = "SELECT Rack_rate , COUNT(house_date) AS nights , SUM(Rack_rate) AS total FROM `house_schedule` WHERE house_date between '".$checkin_date."' and '".$checkout_date."' AND Avaiable = 'Y' AND house_id ='$id'";
                	$res = mysqli_query($conn, $sql)
                	or trigger_error("Query Failed! SQL: $sql - Error: ".mysqli_error($conn), E_USER_ERROR);
                } while($row = mysqli_fetch_array($res)){
-               		$Rack_rate =  $row['Rack_rate'];
-               		$total =  $row['total'];
+               	$Rack_rate =  $row['Rack_rate'];
+                  $total =  $row['total'];
                   $nights =  $row['nights'];	
                   $nights = $nights-1;
                   $total = $total - $Rack_rate;

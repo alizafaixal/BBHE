@@ -72,7 +72,7 @@ $res = mysqli_query($conn, $sql);
                                        <td> <?php echo $row['house_name'] ?> </td>
                                        <td> <?php echo $row['house_location'] ?> </td>
                                        <td> <?php echo $row['house_reviews'] ?> </td>
-                                       <td> <?php echo $row['house_features'] ?> </td>
+                                       <td class="fearures"> <?php echo $row['house_features'] ?> </td>
                                        <td> <?php echo $row['house_kitchen'] ?> </td>
                                        <td> <?php echo $row['house_baths'] ?> </td>
                                        <td> <?php echo $row['house_toilets'] ?> </td>

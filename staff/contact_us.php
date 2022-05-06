@@ -1,5 +1,6 @@
 <?php
 include('header.inc.php');
+$seqID=1;
 $sql = "SELECT * FROM user_messages ORDER BY  added_on desc";
 $msgs = array();
 $res = mysqli_query($conn, $sql)
@@ -50,7 +51,7 @@ if($type = 'delete'){
                                      <?php
                                      foreach($msgs as $list){?>
                                      <tr>
-                                     <td><?php echo $list['message_id'] ?></td>
+                                     <td><?php echo $seqID++ ?></td>
                                      <td><?php echo $list['user_fullName'] ?></td>
                                      <td><?php echo $list['user_number'] ?></td>
                                      <td><?php echo $list['user_email'] ?></td>
