@@ -9,4 +9,4 @@ $conn = mysqli_connect('localhost' , 'mfhanuvt_bbhe' , 'Aliza123#@!', 'mfhanuvt_
 if(mysqli_connect_errno()){
     echo 'Database connection problem '  . mysqli_connect_error($conn);
 }
-?>
+ ?>

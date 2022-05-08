@@ -65,14 +65,14 @@
 					</div> 
 
 					<a href="contact.php">Contact us</a>
-					<div class="dropdown">
+					<div class="dropdown" style="background: lightgrey; border-radius: 5px;">
+
 					<?php
 					if(isset($_SESSION['USER_LOGIN'])){?>
 						<button class="dropbtn"><?php echo $_SESSION['USER_NAME'] ?>
 						<i class="fa fa-caret-down"></i>
 						</button>
 						<div class="dropdown-content">
-					
 						<a href="mybookings.php">My bookings</a>	
 						<a href="logout.php">Logout</a>
 						</div>
