@@ -26,18 +26,18 @@ include('header.php');
 <div class="row">
 <div class="box-1">
 <div class="contact_map">
-	   <h4  class="contactHeading">Contact Info </h4 >
+	   <h2  class="contactHeading">Contact Info </h2 >
 	   <p><i class="fas fa-map-marker-alt"></i> Barlings Beach, New South Wales</p>
 						<p><i class="fas fa-phone-volume"></i> +612 435 123 456</p>
 						<p> <i class="fas fa-at"></i> johnandbarbara@bbhe.com.au</p>
 
-		   <h4  class="contactHeading">Map here <i class="fas fa-hand-point-down"></i></h4 >
+		   <h2  class="contactHeading">Map here <i class="fas fa-hand-point-down"></i></h2 >
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.8150076915713!2d151.2041925152775!3d-33.86865812648289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae3f6e3ef5d7%3A0xebf0ac7c5ecf6239!2sKing%20St%2C%20Sydney%20NSW%202000!5e0!3m2!1sen!2sau!4v1599459505802!5m2!1sen!2sau"
             style="border:0;width:100%;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 		 </div>
 		 <div class="contact_text">
-       <h4  class="contactHeading">How to get to Barlings Beach</h4 >
+       <h2  class="contactHeading">How to get to Barlings Beach</h2 >
         <p>
             It is easy to find our accommodation. Drive south from Sydney along the M1 then the A1 to Mogo then
             turn left at the Tomakin Road intersection
@@ -114,20 +114,20 @@ include('header.php');
 		 <span style="color: red;">Required *</span>
 
      <label for="name"><b>Full name*</b></label>
-							<input type="text" placeholder="Enter your full name" name="fullname" value="<?php if(isset($fname)){ echo $fname ;}?>" >
+							<input type="text" class="formInput" placeholder="Enter your full name" name="fullname" value="<?php if(isset($fname)){ echo $fname ;}?>" >
 							<br> <span class="field_error" id="fnameErr"><?php if(isset($fnameErr)){ echo $fnameErr ;}?></span>
 							<label for="email"><b>Email*</b></label>
-							<input type="text" placeholder="Enter Email" name="email" value="<?php if(isset($email)){ echo $email ;}?>"  >
+							<input type="text" class="formInput" placeholder="Enter Email" name="email" value="<?php if(isset($email)){ echo $email ;}?>"  >
 							<br> <span class="field_error" id="emailErr"><?php if(isset($emailErr)){ echo $emailErr ;}?></span>
 							<label for="mob"><b>Phone*</b></label>
-							<input type="text" placeholder="Enter your mobile number" name="mob"  value="<?php if(isset($mobile)){ echo $mobile ;}?>" >
+							<input type="text"  class="formInput" placeholder="Enter your mobile number" name="mob"  value="<?php if(isset($mobile)){ echo $mobile ;}?>" >
 							<br> <span class="field_error" id="mobileErr"><?php if(isset($mobileErr)){ echo $mobileErr ;}?></span>
 							<label for="prefer">How should we contact you?*</label> 
 							<input id="prefer" type="checkbox" name="user_PreferredMethod" value="mobile" >Mobile
 							<input type="checkbox" name="user_PreferredMethod" value="email">Email 
 							<br> <span class="field_error" id="user_PreferredMethodErr"><?php if(isset($user_PreferredMethodErr)){ echo $user_PreferredMethodErr ;}?></span>
 							<label for="msg">Your question?</label>
-							<textarea name="msg" id="msg"> <?php if(isset($msg)){ echo $msg ;}?></textarea>
+							<textarea class="formInputTextArea" name="msg" id="msg"> <?php if(isset($msg)){ echo $msg ;}?></textarea>
                             <br> <span class="field_error" id="msgErr"><?php if(isset($msgErr)){ echo $msgErr ;}?></span>
                             <br> <span class="field_error" id="err"><?php if(isset($error)){ echo $error ;}?></span> <br>
 							<input type="submit" name="submit" class="btn">

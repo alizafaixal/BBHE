@@ -23,7 +23,7 @@ include('header.php');
 					<!-- <button class="next round" onclick="next()">&#8250;</button> -->
 				</div>
 				<div class="aside">
-					<h2>About Barlings beach holiday escapes</h2>
+					<h2 >About Barlings beach holiday escapes</h2>
 					<div class="comp_info">
 						<p><i class="fas fa-map-marker-alt"></i> Barlings Beach, New South Wales</p>
 						<p><i class="fas fa-phone-volume"></i> +612 435 123 456</p>
@@ -146,53 +146,47 @@ include('header.php');
   </div>
 		<div class="small_container">
 			<h3>Why choose</h3>
-			<h4>Barlings beach holiday escapes</h4>
+			<h4 class="aboutHeading">Barlings beach holiday escapes</h4>
 			<div class="row">
-				<div class="col">
-					<div class="col_text">
-					<div><i class="fas fa-wifi"></i></div>
-						<div><h5>Free Wifi</h5></div>
+				<div class="col col_text">
+					<i class="fas fa-wifi"></i>
+					<h5>Free Wifi</h5>
+				</div>
+				<div class="col col_text">
 
-					
-					</div>
-				</div>
-				<div class="col">
-					<div class="col_text">
-					<div>	<i class="fas fa-utensils"></i></div>
-						<div><h5>Breakfast packs</h5></div>
-					
-					</div>
-				</div>
-				<div class="col">
-					<div class="col_text">
-						<div><i class="fas fa-glass-cheers"></i></div>
-						<div><h5>Picnic Hampers</h5></div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<div class="col_text">
-				<div><i class="fas fa-hotdog"></i></div>
-						<div ><h5>BBQ packs</h5></div>
-					
-					</div>
-				</div>
-				<div class="col">
-					<div class="col_text">
-						<div><i class="fas fa-dog"></i></div>			
-		   				<div>	<h5>Dog walking </h5></div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="col_text">
-						<div><i class="fas fa-hand-holding-heart"></i></div>
-		   				<div>	<h5>No booking fees</h5></div>
-					
-					</div>
-				</div>
-			</div>
+					<i class="fas fa-utensils"></i>
+					<h5>Breakfast packs</h5>
 
+
+				</div>
+				<div class="col col_text">
+
+					<i class="fas fa-glass-cheers"></i>
+					<h5>Picnic Hampers</h5>
+
+				</div>
+				<div class="col col_text">
+
+					<i class="fas fa-hotdog"></i>
+
+					<h5>BBQ packs</h5>
+				</div>
+				<div class="col col_text">
+
+					<i class="fas fa-dog"></i>
+
+					<h5>Dog walking </h5>
+
+				</div>
+				<div class="col col_text">
+
+					<i class="fas fa-hand-holding-heart"></i>
+
+					<h5>No booking fees</h5>
+				</div>
+
+
+			</div>
 		</div>
 		<div id="localHighlights" class="container">
         <h4>LOCAL HIGHLIGHTS</h4>
@@ -202,8 +196,8 @@ include('header.php');
                 <div class="box">
                     <p> <img src="images/Mogo-Wildlife-Park_Logo.jpg" alt="Mogo Wildlife Park Logo"></p>
                     <div class="box_text">
-						<h5>Mogo Zoo</h5>
-						<span><i class="fas fa-external-link-alt"></i> https://mogozoo.com.au/</span>
+						<h5 class="boxHeading">Mogo Zoo</h5>
+						<!-- <span><i class="fas fa-external-link-alt"></i> https://mogozoo.com.au/</span> -->
                         <p>Mogo Zoo is a privately owned zoo with a large collection of exotic animals on display. They
                             offer animal
                             feeding sessions and guided tours throughout the year. It’s located just 10 minutes drive
@@ -217,7 +211,7 @@ include('header.php');
                 <div class="box">
                     <p> <img src="images/Beach_and_Bush_Walks.jfif" alt="Beach and Bush Walks"></p>
                     <div class="box_text">
-                        <h5>Beach and Bush Walks</h5>
+                        <h5 class="boxHeading">Beach and Bush Walks</h5>
                         <p>Local walking tracks are available for all ages and abilities. The beach walks follow the
                             coastline to many
                             coves, inlets and rocky outcrops. For the more serious walker, there are inland bush tracks
@@ -232,7 +226,7 @@ include('header.php');
                 <div class="box">
                     <p> <img src="images/Markets.jfif" alt="Markets and Galleries near Barling Beach"></p>
                     <div class="box_text">
-                        <h5>Markets and Galleries</h5>
+                        <h5 class="boxHeading">Markets and Galleries</h5>
                         <p>Moruya markets are held each Saturday and feature local art, home-made goodies, ceramics, jewelleryand clothing. Local galleries are in abundance throughout the area. Many of these galleries have cafes that supply visitors with coffee and yummy cakes</p>
                     </div>
 
@@ -243,7 +237,7 @@ include('header.php');
                 <div class="box">
                     <p> <img src="images/Restaurants.jfif" alt="Restaurants  near Barling Beach"></p>
                     <div class="box_text">
-                        <h5>Wineries and Restaurants</h5>
+                        <h5 class="boxHeading">Wineries and Restaurants</h5>
                         <p>There are several wineries to visit in the area - offering cellar door sales, restaurants, cafes and tours. Along the way discover a foodie’s paradiseAn acclaimed restaurant in nearby Moruya offers tables with river views and locally sourced food treats</p>
                      
                     </div>
@@ -252,7 +246,7 @@ include('header.php');
                 <div class="box">
                     <p> <img src="images/Shopping.jfif" alt="Beach and Bush Walks"></p>
                     <div class="box_text">
-                        <h5>Shopping Adventures in Mogo</h5>
+                        <h5 class="boxHeading">Shopping Adventures in Mogo</h5>
                         <p>A visit to nearby Mogo will not disappoint. Bookshops, giftware, home living and of course the odd handbag or that "must have" top are yours to purchase</p>
                     </div>
                 </div>
@@ -260,7 +254,7 @@ include('header.php');
                 <div class="box">
                     <p> <img src="images/Water_Sports.jfif" alt="Beach and Bush Walks"></p>
                     <div class="box_text">
-                        <h5>Water Sports</h5>
+                        <h5 class="boxHeading">Water Sports</h5>
                         <p>There’s endless fun for all. Sailing, fishing, kayaking, paddle boarding, snorkeling and surfing are yours to enjoy in and around Barlings Beach</p>
                     </div>
                 </div>
@@ -270,16 +264,16 @@ include('header.php');
     </div>
 
 		<div class="section">
-			<h3>More resources</h3>
+			<h3 class="resourceHeading">More resources</h3>
 			<div class="row">
 				<div class="box">
 					<h4>Read the testimonals</h4>
-					<p>Read what people say about their experience at bbhe<button onclick="togglePopup()"><i
+					<p>Read what people say about their experience at Barling Beach Holiday Escape.<button class="fa-arrow-right-btn" onclick="togglePopup()"><i
 								class="fas fa-arrow-right"></i></button></p>
 					<div class="popup" id="popup">
 						<div class="overlay"> </div>
 						<div class="content">
-							<h3>testimonals</h3>
+							<h3 class="testimonalHeading">Testimonals</h3>
 							<div class="close-btn" onclick="togglePopup()">&times;</div>
 							<div class="reviews">
 								<div class="review">
@@ -337,7 +331,7 @@ include('header.php');
 				</div>
 				<div id="contact" class="box">
 					<h4>Contact the owner</h4>
-					<p>if you have any question, you can directly message the owner here now <a href="contact.php"><i class="fas fa-arrow-right"></i></a></p>
+					<p>If you have any question, you can directly message the owner here now <a href="contact.php"><i class="fas fa-arrow-right"></i></a></p>
 						
 
 				
